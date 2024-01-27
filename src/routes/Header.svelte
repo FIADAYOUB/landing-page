@@ -1,6 +1,7 @@
 <script>
   import Icon from '@iconify/svelte';
   import { navLinks } from "$lib/constants";
+  import { slide } from "svelte/transition";
 
   let active = navLinks[0].id;
   let toggle = false;
@@ -38,6 +39,7 @@
         </button>
         {#if toggle}
           <div
+            transition:slide
             class="absolute top-12 right-0 left-0 z-10 w-full p-6 bg-white sidebar"
           >
             <ul class="list-none flex justify-end items-start flex-1 flex-col">
@@ -48,7 +50,7 @@
                         }
                 >
                   <a
-                    href={`#${nav.id}`}
+                    href={`/${nav.id}`}
                     on:click={() => active = nav.id}
                   >
                     {nav.title}
