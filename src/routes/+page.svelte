@@ -1,3 +1,10 @@
+<script>
+	import Carousel from 'svelte-carousel';
+	import { browser } from '$app/environment';
+
+  let carousel;
+
+</script>
 <div class="page-index">
 	<div class="page-content">
 		<section class="index-header h-[600px] relative py-2 px-[5%] bg-primary text-white">
@@ -18,7 +25,18 @@
 			</div>
 		</section>
 
-		<section class="main-content h-[80vh] bg-yellow-600">
+		<section class="main-content h-[80vh]">
+			<div class="show-case min-h-[200px] py-8 px-[calc(5%+20px)] flex justify-center">
+				{#if browser}
+					<Carousel
+						bind:this={carousel}
+					>
+						<div class="h-[200px] w-[200px] m-w-[200px] bg-green-600 ">1</div>
+						<div class="h-[200px] w-[200px] m-w-[200px] bg-green-600 ">2</div>
+						<div class="h-[200px] w-[200px] m-w-[200px] bg-green-600 ">3</div>
+					</Carousel>
+				{/if}
+			</div>
 		</section>
 
 	</div>
