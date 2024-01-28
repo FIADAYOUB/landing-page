@@ -5,9 +5,11 @@
 
   let active = navLinks[0].id;
   let toggle = false;
+  let scrollY = 0;
 
 </script>
-<div class="sm:px-16 px-6 flex justify-center items-center bg-primary w-full sticky top-0 z-10">
+<svelte:window bind:scrollY />
+<div class:costum-header={scrollY > 100} class="sm:px-16 px-6 flex justify-center items-center bg-primary w-full sticky top-0 z-10">
   <div class="max-w-[1280px] w-full">
     <nav class="w-full flex sm:py-6 py-2 justify-between items-center navbar">
       <h1 class="text-white">LOGO</h1>
@@ -64,3 +66,9 @@
     </nav>
   </div>
 </div>
+
+<style lang="postcss">
+  .costum-header {
+    @apply bg-primary/80 shadow-woke transition-all duration-200;
+  }
+</style>
