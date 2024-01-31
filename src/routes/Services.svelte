@@ -16,20 +16,35 @@
       >
     </Carousel>
     {/if} -->
-    <div class="category-card flex flex-col relative overflow-hidden rounded-lg w-[150px] md:w-[200px] h-[300px] text-white hover:text-primary bg-red-600 transition-colors group">
+    <div class="service-card flex flex-col relative overflow-hidden rounded-lg w-[150px] md:w-[200px] h-[300px] text-white hover:text-primary transition-colors group">
       <img src={img1} alt="" class="z-0 w-full h-full object-cover transform transition-transform delay-300 group-hover:scale-[1.3]" />
+      <div class="card-info">
+        <h2 class="font-bold text-2xl">Title</h2>
+      </div>
     </div>
   </div>
 </section>
 
 <style lang="postcss">
-  .category-card::before {
-    @apply bg-gradient-top content-[""] absolute top-0 left-0 w-full h-full transition duration-1000 ease-in-out z-10;
+  .card-info {
+    @apply absolute z-20 bottom-1 w-full flex flex-col justify-center items-center transition-colors duration-1000;
   }
-  .category-card:hover::before {
-    @apply w-0 h-0;
+  .service-card:hover .card-info {
+    @apply text-white;
   }
-  .category-card::after {
-    @apply bg-gradient-bottom content-[""] absolute top-0 left-0 w-full h-full transition duration-1000 ease-in-out z-10;
+  .service-card::before {
+    @apply content-[""] absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out z-10;
+  }
+  .service-card::after {
+    @apply content-[""] absolute bottom-0 right-0 w-full h-full transition-all duration-1000 ease-in-out z-10;
+  }
+  .service-card::before {
+    @apply  bg-gradient-top;
+  }
+  .service-card::after {
+    @apply  bg-gradient-bottom;
+  }
+  .service-card:hover::before, .service-card:hover::after {
+    @apply h-0 w-0;
   }
 </style>
