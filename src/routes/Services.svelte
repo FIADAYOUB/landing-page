@@ -1,5 +1,4 @@
 <script>
-  import { register } from "swiper/element/bundle";
   import { browser } from "$app/environment";
   import img1 from "$lib/images/item1.jpg";
   import img2 from "$lib/images/item2.jpg";
@@ -17,8 +16,9 @@
     { title: "title 3", img: img3 },
     { title: "title 4", img: img4 }
   ];
-  onMount(()=> {
-    register();
+  onMount(async ()=> {
+    const module = (await import("swiper/element/bundle"))
+    module.register();
   })
 </script>
 
@@ -27,6 +27,7 @@
     <swiper-container
       slides-per-view={"auto"}
       css-mode={true}
+      auto
     >
       {#each items as item}
         <swiper-slide
