@@ -9,7 +9,7 @@
 
 </script>
 <svelte:window bind:scrollY />
-<div class:costum-header={scrollY > 100} class="sm:px-16 px-6 flex justify-center items-center bg-primary w-full sticky top-0 z-10">
+<div class:costum-header={scrollY > 100} class="sm:px-16 px-6 flex justify-center items-center bg-secondary-base w-full sticky top-0 z-10">
   <div class="max-w-[1280px] w-full">
     <nav class="w-full flex sm:py-6 py-2 justify-between items-center navbar">
       <h1 class="text-white">LOGO</h1>
@@ -17,7 +17,7 @@
         {#each navLinks as nav}
           <li
             class={`group font-poppins cursor-pointer text-[16px] mr-10 last:mr-0
-            ${ active === nav.id ? "text-secondary font-semibold" : "text-dimWhite font-regular"}`}
+            ${ active === nav.id ? "text-primary-base font-semibold" : "text-tertiary-base font-regular"}`}
           >
             <a
               href={`/${nav.id}`}
@@ -26,7 +26,7 @@
               {nav.title}
             </a>
             <div
-              class="h-0.5 bg-secondary scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"
+              class="h-0.5 bg-primary-base scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"
             />
           </li>
         {/each}
@@ -48,7 +48,7 @@
               {#each navLinks as nav, index}
                 <li
                   class={`font-poppins font-medium cursor-pointer text-[16px] mb-4 last:mb-0
-                          ${active === nav.id ? "text-secondary" : "text-primary"}`
+                          ${active === nav.id ? "text-primary-base" : "text-secondary-base"}`
                         }
                 >
                   <a
@@ -69,6 +69,6 @@
 
 <style lang="postcss">
   .costum-header {
-    @apply bg-primary/80 shadow-woke transition-all duration-200;
+    @apply bg-secondary-base/80 shadow-woke transition-all duration-200;
   }
 </style>

@@ -18,7 +18,7 @@
   })
 </script>
 
-<section class="main-content h-[80vh]">
+<section class="main-content h-[80vh] bg-tertiary-base">
   <div class="show-case py-8 px-1 md:px-[calc(5%+20px)] flex justify-center w-full h-[350px] md:h-[450px] overflow-hidden">
     <swiper-container
       navigation={true}
