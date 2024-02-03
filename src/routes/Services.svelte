@@ -10,28 +10,29 @@
     { title: "title 1", img: img1 },
     { title: "title 2", img: img2 },
     { title: "title 3", img: img3 },
-    { title: "title 4", img: img4 },
-    { title: "title 1", img: img1 },
-    { title: "title 2", img: img2 },
-    { title: "title 3", img: img3 },
     { title: "title 4", img: img4 }
   ];
   onMount(async ()=> {
-    const module = (await import("swiper/element/bundle"))
+    let module = await import("swiper/element/bundle")
     module.register();
   })
 </script>
 
 <section class="main-content h-[80vh]">
-  <div class="show-case py-8 px-[calc(5%+20px)] flex justify-center">
+  <div class="show-case py-8 px-1 md:px-[calc(5%+20px)] flex justify-center w-full h-[350px] md:h-[450px] overflow-hidden">
     <swiper-container
-      slides-per-view={"auto"}
-      css-mode={true}
-      auto
+      navigation={true}
+      pagination={true}
+      slides-per-view="auto"
+      space-between={30}
+      centered-slides={true}
+      class="w-full"
+      autoplay={true}
+      init={true}
     >
       {#each items as item}
         <swiper-slide
-            class="service-card mx-4 flex flex-col relative overflow-hidden rounded-lg w-[150px] md:w-[300px] h-[300px] text-white hover:text-primary transition-colors group"
+            class="service-card mx-4 flex flex-col relative overflow-hidden rounded-lg w-[150px] md:h-[350px] md:w-[250px] h-[250px] text-white hover:text-primary transition-colors group"
           >
             <img
               src={item.img}
