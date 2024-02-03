@@ -69,6 +69,6 @@
 
 <style lang="postcss">
   .costum-header {
-    @apply bg-secondary-base/80 shadow-woke transition-all duration-200;
+    @apply bg-secondary-base/80 transition-all duration-200;
   }
 </style>
