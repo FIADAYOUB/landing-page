@@ -1,5 +1,5 @@
 <script>
-  import Services from './Services.svelte';
+  import Features from '$lib/components/sections/Features.svelte';
 
 </script>
 <div class="page-index">
@@ -22,7 +22,7 @@
 			</div>
 		</section>
 
-		<Services />
+		<Features />
 
 	</div>
 </div>
