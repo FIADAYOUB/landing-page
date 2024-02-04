@@ -1,5 +1,6 @@
 <script>
   import Features from '$lib/components/sections/Features.svelte';
+  import Services from '$lib/components/sections/Services.svelte';
 
 </script>
 <div class="page-index">
@@ -23,6 +24,9 @@
 		</section>
 
 		<Features />
+		<div class="p-20 md:p-32">
+			<Services />
+		</div>
 
 	</div>
 </div>
