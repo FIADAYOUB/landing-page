@@ -1,4 +1,5 @@
 <script>
+  import dayjs from 'dayjs';
 
 </script>
 <div class="bg-black  lg:px-28 pt-14 px-10 pb-10">
@@ -129,7 +130,7 @@
         <p>Terms of Use</p>
       </div>
       <div class="text-tertiary-darken4 lg:justify-end justify-start pt-4 flex md:justify-start md:pt-4 text-xs md:text-base lg:pt-0">
-        © 2024, All Rights Reserved
+        © {dayjs().format('YYYY')}, All Rights Reserved
       </div>
     </div>
 </div>
