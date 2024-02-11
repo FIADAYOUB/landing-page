@@ -42,13 +42,13 @@
         {#if toggle}
           <div
             transition:slide
-            class="absolute top-12 right-0 left-0 z-10 w-full p-6 bg-white sidebar"
+            class="absolute top-12 right-0 left-0 z-10 w-full p-6 bg-secondary-base text-white sidebar"
           >
             <ul class="list-none flex justify-end items-start flex-1 flex-col">
               {#each navLinks as nav, index}
                 <li
                   class={`font-poppins font-medium cursor-pointer text-[16px] mb-4 last:mb-0
-                          ${active === nav.id ? "text-secondary-darken" : "text-secondary-base"}`
+                          ${active === nav.id ? "text-secondary-darken" : "text-white"}`
                         }
                 >
                   <a
