@@ -5,7 +5,7 @@
 </script>
 <div class="page-index">
 	<div class="page-content">
-		<section class="index-header h-[80vh] relative py-2 px-[5%] bg-secondary-base text-white" id="particles-js">
+		<section class="home-section h-[80vh] relative py-2 px-[5%] text-white bg-[url($lib/images/homepage.png)] bg-cover" id="home-section">
 			<div class="headline-container h-full w-full flex flex-1 flex-col justify-center items-center max-w-[400px] mx-auto">
 				<h1 class="text-[3em] font-bold text-center mb-3 font-poppins">WE ARE A LANDING PAGE</h1>
 				<p class="text-center">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
