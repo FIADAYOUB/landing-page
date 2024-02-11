@@ -36,7 +36,8 @@ export default {
       },
       backgroundImage: {
         'gradient-top': 'linear-gradient(-55deg,transparent 50%,rgba(0,0,0,.2) 0)',
-        'gradient-bottom': 'linear-gradient(-55deg,rgba(0,0,0,.2) 50%,transparent 0)'
+        'gradient-bottom': 'linear-gradient(-55deg,rgba(0,0,0,.2) 50%,transparent 0)',
+        'gradient-reviews': "linear-gradient(180deg,rgba(35,35,35,.74) 0%,rgba(35,35,35,0) 100%)",
       }
     },
     screens: {

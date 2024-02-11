@@ -1,5 +1,6 @@
 <script>
   import Features from '$lib/components/sections/Features.svelte';
+  import Reviews from '$lib/components/sections/Reviews.svelte';
   import Services from '$lib/components/sections/Services.svelte';
 
 </script>
@@ -85,7 +86,7 @@
 		<div class="p-20 md:p-32">
 			<Services />
 		</div>
-
+		<Reviews />
 	</div>
 </div>
 
