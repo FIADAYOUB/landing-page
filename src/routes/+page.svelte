@@ -82,10 +82,10 @@
 
 		</section>
 
-		<Features />
+		<!-- <Features />
 		<div class="p-20 md:p-32">
 			<Services />
-		</div>
+		</div> -->
 		<Reviews />
 	</div>
 </div>
