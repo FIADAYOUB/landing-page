@@ -1,19 +1,14 @@
 <script>
   export let service;
   const {title, description, icon} = service;
+  import img1 from "$lib/images/item3.jpg";
+
 </script>
 
-<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden transition-all duration-300 ease-in hover:scale-105">
-    <div class="rounded-xl bg-tertiary-base dark:bg-gray-950 p-3 text-heading-1 w-max relative">
-       {@html icon}
+<div class="service_card min-h-[480px] h-[480px] w-[380px] max-w-[380px] relative rounded-[20px] bg-[rgba(255,255,255,.1)] p-[5px] border-[1px] border-gray-800">
+    <div class="service_card-front bg-[#090121] rotate-0 flex flex-col h-full rounded-[20px] border-[1px] border-gray-800">
+        <div class="service_card-image absolute top-0 left-0 right-0 bottom-0 opacity-50 overflow-hidden rounded-[20px] grayscale-[50%]">
+            <img src={img1} alt="" class="h-full w-full bg-cover">
+        </div>
     </div>
-    <div class="mt-6 space-y-4 relative">
-        <h2 class="text-lg md:text-xl font-semibold text-heading-2">
-            {title}
-        </h2>
-        <p>
-            {description}
-        </p>
-    </div>
-    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-tertiary-base rounded-full"></span>
 </div>

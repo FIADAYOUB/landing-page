@@ -3,16 +3,16 @@
 import { services } from "$lib/constants";
 </script>
 <section id="services">
-  <div class="space-y-10 md:sapce-y-12">
+  <div class="space-y-10 md:sapce-y-12 text-white">
       <div class="text-center max-w-3xl mx-auto space-y-4">
-          <h1>
+          <h1 class="text-secondary-lighten font-bold text-3xl">
               What we offer
           </h1>
           <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div class="flex flex-wrap gap-[2.5em] items-center justify-center">
         {#each services as service}
           <ServiceCard {service} />
         {/each}
