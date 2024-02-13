@@ -83,7 +83,7 @@
 		</section>
 
 		<!-- <Features /> -->
-		<div class="p-20 md:p-32 bg-black">
+		<div class="py-32 bg-black">
 			<Services />
 		</div>
 		<Reviews />

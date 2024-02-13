@@ -24,6 +24,7 @@ export default {
         },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        paytone: ["Paytone One", "sans-serif"]
       },
       boxShadow: {
         'woke': '0px 9.9px 21.6px rgba(9, 151, 124, 0.41)',
