@@ -26,6 +26,19 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         paytone: ["Paytone One", "sans-serif"]
       },
+      animation: {
+        spin: 'spin .5s 1',
+      },
+      keyframes: {
+        spin: {
+          from: {
+            transform: 'rotate(0deg)'
+          },
+          to: {
+            transform: 'rotate(180deg)'
+          }
+        }
+      },
       boxShadow: {
         'woke': '0px 9.9px 21.6px rgba(9, 151, 124, 0.41)',
         '3xl': '0px 2px 10px 0px rgba(58, 53, 65, 0.1)',

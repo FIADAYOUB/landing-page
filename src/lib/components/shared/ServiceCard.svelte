@@ -2,15 +2,37 @@
   export let service;
 
   import img1 from "$lib/images/item3.jpg";
+  import Icon from "@iconify/svelte";
 
   const { title, description, icon } = service;
 
   let showDescription = false;
+  let onHover = false;
+  let spin = false;
+
+  function handleDescription() {
+    showDescription = !showDescription
+    spin = true;
+    setTimeout(()=>{
+      spin = false;
+    }, 1000)
+  }
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
+  on:mouseenter={() => (onHover = true)}
+  on:mouseleave={() => (onHover = false)}
   class="service_card min-h-[480px] h-[480px] w-[380px] max-w-[380px] relative rounded-[20px] bg-[rgba(255,255,255,.1)] p-[5px] border-[1px] border-gray-800"
 >
+    <button
+      type="button"
+      on:click={handleDescription}
+      class:animate-spin={spin}
+      class="absolute -top-3 -right-3 z-20 {onHover ? 'opacity-100' : 'opacity-0'} {showDescription ? 'text-white bg-secondary-base' : 'bg-white text-secondary-base'} transition-all duration-500 ease-in-out flex items-center justify-center h-12 w-12 text-[20px] rounded-full"
+    >
+      <Icon icon="fa-solid:sync" />
+    </button>
   <div class="flip-card-inner" class:flip-it={showDescription}>
     <div
       class="service_card-front bg-[#090121] rotate-0 flex flex-col w-full h-full rounded-[20px] border-[1px] border-gray-800"
@@ -24,11 +46,9 @@
         </div>
       </div>
     </div>
-    <div class="flip-card-back conceal-answer">
+    <div class="flip-card-back">
       <div>
-        <p>
-          {description}
-        </p>
+        {@html description}
       </div>
     </div>
   </div>
@@ -70,8 +90,5 @@
   .flip-card-back {
     backface-visibility: hidden;
     transform: rotateY(180deg);
-  }
-  .conceal-answer {
-    animation: revealTextSlowly 0.3s forwards;
   }
 </style>
