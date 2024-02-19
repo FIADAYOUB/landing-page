@@ -25,7 +25,7 @@
       delay: -1,
       ease: Power2.out,
     });
-    tl.staggerFromTo(".features > li", 4, { x: 1000 }, { x: 0 }, 0.5, 0);
+    tl.staggerFromTo(".features > li", 4, { x: 1000 }, { x: 0 }, 0.5);
 
     return {
       duration: duration * 1000,

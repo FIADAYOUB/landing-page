@@ -1,8 +1,22 @@
 <script>
+  import { gsap, Power2 } from "gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
   import Details from "$lib/components/sections/Details.svelte";
   import Features from "$lib/components/sections/Features.svelte";
   import Reviews from "$lib/components/sections/Reviews.svelte";
   import Services from "$lib/components/sections/Services.svelte";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    tweenIn();
+  });
+
+  function tweenIn() {
+    let tl = gsap.timeline();
+
+    tl.staggerFromTo(".homepage_hero-content > li", 4, { x: 1000 }, { x: 0 }, 0.5);
+  }
 </script>
 
 <div class="page-index font-poppins">
@@ -14,7 +28,7 @@
       <div
         class="home_wrapper w-[90%] my-5 mx-auto max-w-[1200px] text-left bg-transparent"
       >
-        <div class="flex flex-col-reverse md:flex-row items-center">
+        <div class="flex flex-col-reverse gap-1 md:gap-20 md:flex-row items-center">
           <div
             class="homepage_hero-text max-w-[600px] mt-4 md:mt-[100px] md:mb-[140px] flex flex-col items-start gap-4"
           >
@@ -40,13 +54,13 @@
               </button>
             </div>
           </div>
-          <div
-            class="homepage_hero-content relative grow h-[350px] w-[350px] md:w-full md:h-[600px] bg-[url($lib/images/homepage-sm.png)] bg-cover md:bg-none rounded-full"
+          <ul
+            class="homepage_hero-content relative grow h-[350px] w-[350px] md:w-[500px] md:min-w-[500px] md:max-w-[500px] md:h-[500px] md:max-h-[500px] bg-[url($lib/images/homepage-sm.png)] bg-cover md:bg-none rounded-full"
           >
-            <div
+            <li
               class="absolute -top-6 md:top-4 left-6 md:left-0 flex flex-col gap-2 md:gap-3"
             >
-              <div class="flex items-center gap-1 md:gap-4">
+              <din class="flex items-center gap-1 md:gap-4">
                 <div class="avatar">
                   <img
                     src=""
@@ -56,7 +70,7 @@
                 </div>
                 <h3>Dr. Pero</h3>
                 <p class="text-xs opacity-70">52 min ago</p>
-              </div>
+              </din>
               <div
                 class="bg-gray-100 rounded-lg p-2 max-w-[250px] text-black text-xs md:text-sm"
               >
@@ -67,8 +81,8 @@
               >
                 Feels good! Thanks Dr. Pero
               </div>
-            </div>
-            <div
+            </li>
+            <li
               class="absolute -right-8 md:right-0 bottom-20 bg-white text-black rounded-lg p-2 md:p-4"
             >
               <ul>
@@ -103,9 +117,9 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </li>
 
-            <div
+            <li
               class="absolute -left-8 md:left-0 bottom-0 bg-white text-black rounded-lg p-2 md:p-4 max-w-[230px] md:max-w-[280px]"
             >
               <div class="flex items-center justify-start gap-3">
@@ -121,8 +135,8 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
