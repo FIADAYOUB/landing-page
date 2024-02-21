@@ -8,7 +8,7 @@
       M
     </div>
     <div>
-      <h3>Max</h3>
+      <h3>Ayoub</h3>
       <p class="text-xs opacity-70">16. Janvier, 2024</p>
     </div>
   </div>

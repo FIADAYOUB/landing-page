@@ -55,7 +55,7 @@
             </div>
           </div>
           <ul
-            class="homepage_hero-content relative grow h-[350px] w-[350px] md:w-[500px] md:min-w-[500px] md:max-w-[500px] md:h-[500px] md:max-h-[500px] bg-[url($lib/images/homepage-sm.png)] bg-cover md:bg-none rounded-full"
+            class="homepage_hero-content relative grow h-[350px] w-[350px] md:w-[500px] md:min-w-[400px] md:max-w-[400px] md:h-[400px] md:max-h-[400px] bg-[url($lib/images/homepage-sm.png)] bg-cover md:bg-none rounded-full"
           >
             <li
               class="absolute -top-6 md:top-4 left-6 md:left-0 flex flex-col gap-2 md:gap-3"
@@ -142,10 +142,8 @@
     </section>
 
     <Details />
-    <!-- <Features /> -->
-
+    <Features />
     <Services />
-
     <Reviews />
   </div>
 </div>
