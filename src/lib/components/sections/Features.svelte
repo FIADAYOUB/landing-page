@@ -18,7 +18,11 @@
   })
 </script>
 
-<section class="main-content h-[80vh]">
+<section class="main-content h-[80vh] text-white">
+  <div class="text-center max-w-3xl mx-auto space-y-4">
+    <h1 class="text-secondary-lighten font-bold text-3xl">Swiper</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
   <div class="show-case py-8 px-1 md:px-[calc(5%+20px)] flex justify-center w-full h-[350px] md:h-[450px] overflow-hidden">
     <swiper-container
       navigation={true}

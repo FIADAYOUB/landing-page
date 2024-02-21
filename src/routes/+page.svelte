@@ -1,12 +1,12 @@
 <script>
-  import { gsap, Power2 } from "gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+  import { gsap } from "gsap";
+  import img from "$lib/images/user.png"
   import Details from "$lib/components/sections/Details.svelte";
   import Features from "$lib/components/sections/Features.svelte";
   import Reviews from "$lib/components/sections/Reviews.svelte";
   import Services from "$lib/components/sections/Services.svelte";
   import { onMount } from "svelte";
+
 
   onMount(() => {
     tweenIn();
@@ -63,9 +63,9 @@
               <din class="flex items-center gap-1 md:gap-4">
                 <div class="avatar">
                   <img
-                    src=""
+                    src={img}
                     alt=""
-                    class="bg-white h-10 md:h-14 w-10 md:w-14 rounded-full"
+                    class="h-10 md:h-14 w-10 md:w-14 rounded-full object-cover bg-cover"
                   />
                 </div>
                 <h3>Dr. Pero</h3>
@@ -90,9 +90,9 @@
                   class="pb-1 md:pb-2 border-b border-b-gray-300 flex items-center justify-start gap-3"
                 >
                   <img
-                    src=""
+                    src={img}
                     alt=""
-                    class="avatar bg-primary-base h-10 w-10 rounded-full"
+                    class="avatar h-10 w-10 rounded-full"
                   />
                   <div class="grow text-xs">
                     <div class="font-medium">Performance indicator</div>
@@ -104,9 +104,9 @@
                 </li>
                 <li class="flex items-center justify-start gap-3 mt-1 md:mt-2">
                   <img
-                    src=""
+                    src={img}
                     alt=""
-                    class="avatar bg-primary-base h-10 w-10 rounded-full"
+                    class="avatar h-10 w-10 rounded-full"
                   />
                   <div class="grow text-xs">
                     <div class="font-medium">Key Biomarker</div>
@@ -124,9 +124,9 @@
             >
               <div class="flex items-center justify-start gap-3">
                 <img
-                  src=""
+                  src={img}
                   alt=""
-                  class="avatar bg-primary-base h-10 w-10 min-w-10 rounded-full"
+                  class="avatar h-10 w-10 min-w-10 rounded-full"
                 />
                 <div class="grow text-xs">
                   <p>
