@@ -3,3 +3,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+@layer base {
+  h1,h2,h3,h4 {
+    @apply font-bold;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+
+  /* Hide the scrollbar by default */
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-track {
+    visibility: hidden;
+  }
+
+  /* Show the scrollbar on hover */
+  :hover::-webkit-scrollbar-thumb,
+  :hover::-webkit-scrollbar-track {
+    visibility: visible;
+  }
+  .page-index {
+    @apply min-h-[calc(100vh-200px)] flex flex-col items-center justify-center;
+  }
+}

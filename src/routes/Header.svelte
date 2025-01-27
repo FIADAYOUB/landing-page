@@ -20,7 +20,7 @@
             ${ active === nav.id ? "text-secondary-darken font-semibold" : "font-regular"}`}
           >
             <a
-              href={`/${nav.id}`}
+              href={`${nav.id}`}
               on:click={() => active = nav.id}
             >
               {nav.title}
