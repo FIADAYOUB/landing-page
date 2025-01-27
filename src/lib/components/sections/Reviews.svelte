@@ -12,7 +12,7 @@
   <div
     class="{displayFull
       ? 'h-fit'
-      : 'h-[42em]'} overflow-hidden transition-all duration-1000 ease-in-out"
+      : 'h-[42em]'} overflow-hidden transition-all duration-300 ease-in-out"
   >
     <div
       class="relative bg-gradient-reviews bg-transparent w-full rounded-xl md:px-20 px-2 mt-40 pb-40"

@@ -31,7 +31,7 @@
       space-between={30}
       centered-slides={true}
       class="w-full"
-      autoplay={true}
+      autoplay={false}
       init={true}
     >
       {#each items as item}
